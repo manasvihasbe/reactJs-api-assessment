@@ -13,7 +13,6 @@ function UrlExists(url) {
 }
 
 export default function Link() {
-  const [authors, setAuthors] = useState([]);
   const [internalLinks, setLinkInternal] = useState([]);
   const [externalLinks, setLinkExternal] = useState([]);
 
@@ -24,7 +23,6 @@ export default function Link() {
       );
       const jsonResult = await result.json();
 
-      setAuthors(jsonResult);
       var internalLinks = [];
       var externalLinks = [];
       var posts = jsonResult["posts"];
